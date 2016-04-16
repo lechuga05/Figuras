@@ -46,12 +46,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(108, 48);
             // 
-            // colorToolStripMenuItem
-            // 
-            this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.colorToolStripMenuItem.Text = "Color";
-            // 
             // figuraToolStripMenuItem
             // 
             this.figuraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -61,6 +55,20 @@
             this.figuraToolStripMenuItem.Name = "figuraToolStripMenuItem";
             this.figuraToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.figuraToolStripMenuItem.Text = "Figura";
+            // 
+            // circuloToolStripMenuItem
+            // 
+            this.circuloToolStripMenuItem.Name = "circuloToolStripMenuItem";
+            this.circuloToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.circuloToolStripMenuItem.Text = "Circulo";
+            this.circuloToolStripMenuItem.Click += new System.EventHandler(this.circuloToolStripMenuItem_Click);
+            // 
+            // rectanguloToolStripMenuItem
+            // 
+            this.rectanguloToolStripMenuItem.Name = "rectanguloToolStripMenuItem";
+            this.rectanguloToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.rectanguloToolStripMenuItem.Text = "Rectangulo";
+            this.rectanguloToolStripMenuItem.Click += new System.EventHandler(this.rectanguloToolStripMenuItem_Click);
             // 
             // 
             // Form1

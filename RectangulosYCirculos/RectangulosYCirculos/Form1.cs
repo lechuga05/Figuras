@@ -20,6 +20,7 @@ namespace WindowsFormsApplication1
 
             figuras = new List<Figura>();
             InitializeComponent();
+            circuloToolStripMenuItem.Checked = true;
             figura_actual = TipoFigura.Circulo;
 
         }
@@ -28,15 +29,19 @@ namespace WindowsFormsApplication1
         {
             if (MouseButtons.Right == e.Button)
             {
-                Rectangulo r = new Rectangulo(e.X, e.Y);
-                r.Dibuja(this);
-                figuras.Add(r);
+                contextMenuStrip1.Show(this, e.X, e.Y);
             }
-            if (MouseButtons.Left == e.Button)
+            if (MouseButtons.Left == e.Button && circuloToolStripMenuItem.Checked == true)
             {
                 Circulo c = new Circulo(e.X, e.Y);
                 c.Dibuja(this);
                 figuras.Add(c);
+            }
+            else if (MouseButtons.Left == e.Button && rectanguloToolStripMenuItem.Checked == true)
+            {
+                Rectangulo r = new Rectangulo(e.X, e.Y);
+                r.Dibuja(this);
+                figuras.Add(r);
             }
 
 
@@ -50,6 +55,21 @@ namespace WindowsFormsApplication1
 
             }
         }
+
+        private void circuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            circuloToolStripMenuItem.Checked = true;
+            rectanguloToolStripMenuItem.Checked = false;
+            
+        }
+
+        private void rectanguloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rectanguloToolStripMenuItem.Checked = true;
+            circuloToolStripMenuItem.Checked = false;
+            
+        }
+      
 
         private void Form1_Load(object sender, EventArgs e)
         {
